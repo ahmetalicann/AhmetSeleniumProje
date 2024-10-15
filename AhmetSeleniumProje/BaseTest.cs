@@ -38,45 +38,7 @@ namespace AhmetSeleniumProje
             driver.Quit();
         }
 
-        //CSS ile seçilen elementin sayfada görünür olmasını bekler
-        public void waitCssElement(string elementCss)
-        {
-            //wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
-            wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.CssSelector(elementCss)));
-        }
-
-        //Id ile seçilen elementin sayfada görünür olmasını bekler
-        public void waitIdElement(string elementId)
-        {
-            wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.Id(elementId)));
-        }
-
-        //Xpath ile seçilen elementin sayfada görünür olmasını bekler
-        public void waitXpathElement(string elementxPath)
-        {
-            wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.XPath(elementxPath)));
-        }
-
-        //Belirlenen Textin , CSS ile seçilen element içerisinde string olarak varolmasını bekler
-        public void waitCssText(string elementCss, string elementText)
-        {
-            wait.Until(ExpectedConditions.TextToBePresentInElementLocated(By.Id(elementCss), elementText));
-        }
-
-
-        //Belirlenen Textin , Id ile seçilen element içerisinde string olarak varolmasını bekler
-        public void waitIdText(string elementId, string elementText)
-        {
-            wait.Until(ExpectedConditions.TextToBePresentInElementLocated(By.Id(elementId), elementText));
-        }
-
-        //Belirlenen Textin , CSS ile seçilen element içerisinde string olarak varolmasını bekler
-        public void waitXpathText(string elementXpath, string elementText)
-        {
-            wait.Until(ExpectedConditions.TextToBePresentInElementLocated(By.XPath(elementXpath), elementText));
-        }
-
-
+       
 
     }
 }
